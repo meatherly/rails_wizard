@@ -2,6 +2,8 @@ after_everything do
   git :init
   git :add => '.'
   git :commit => '-m "Initial import."'
+  git :remote => "add origin git@bitbucket.org:metova/#{app_name.gsub(' ', '-').downcase}.git"
+  git :push => "origin master"
 end
 
 __END__

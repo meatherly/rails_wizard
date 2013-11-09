@@ -1,8 +1,7 @@
 gem 'jquery-rails'
 
 after_bundler do
-  ui = config['ui'] ? ' --ui' : ''
-  generate "jquery:install#{ui}"
+  generate "jquery:install"
 end
 
 __END__
@@ -16,8 +15,3 @@ category: assets
 tags: [javascript, framework]
 
 args: ["-J"]
-
-config:
-  - ui:
-      type: boolean
-      prompt: Install jQuery UI?
